@@ -3,7 +3,7 @@ RagGIS(Geographic Information Service) for Arma 3. Dynamic Mapping of Arma 3 cam
 
 RagGIS was built to create a dynamic map for OPCOM UK's Arma 3 campaigns to supliment the intel team. It is a basic web server built using Leaflet that allows for the mapping of strategic assets.
 
-Credit to jetelain.github.io for their work on the bringing the arma 3 maps into Leaflet
+Credit to https://github.com/jetelain/Arma3Map for their work on the bringing the arma 3 maps into Leaflet
 
 # Screenshots
 ![image](https://user-images.githubusercontent.com/43555809/143468199-3b77412d-4813-4b14-878a-24ad137ec756.png)
