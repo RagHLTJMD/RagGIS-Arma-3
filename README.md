@@ -36,4 +36,5 @@ Then using the markers above just refrence the var name.
 # Future Plans
 
 Change from hard coded marker locations to populate from database
+
 Create UI to allow users to add markers to the map making it a smoother experience
