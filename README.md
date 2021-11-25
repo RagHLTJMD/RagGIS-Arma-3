@@ -22,4 +22,5 @@ Step 3. Placing markers.
 
 Markers
 L.marker([X CORD IN Meters, Y CORD IN Meters], {icon: ICON VAR NAME}).addTo(map);
+
 Example L.marker([2200, 11840], {icon: BCDO}).addTo(map);
