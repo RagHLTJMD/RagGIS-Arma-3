@@ -32,3 +32,8 @@ Start by declaring the variable with the refrence to their icon (https://spatial
 ![image](https://user-images.githubusercontent.com/43555809/143471775-3f3ec98f-92b7-4631-bc6e-1501249a1448.png)
 
 Then using the markers above just refrence the var name.
+
+# Future Plans
+
+Change from hard coded marker locations to populate from database
+Create UI to allow users to add markers to the map making it a smoother experience
