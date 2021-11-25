@@ -13,6 +13,7 @@ Credit to jetelain.github.io for their work on the bringing the arma 3 maps into
 # How to use
 
 Step 1. Clone the repo and load it into your webserver root
+
   NGINX - /usr/share/nginx/http
   
 Step 2. select which map you want to load by changing lines 25 and 28
@@ -20,7 +21,14 @@ Step 2. select which map you want to load by changing lines 25 and 28
 
 Step 3. Placing markers. 
 
-Markers
-L.marker([X CORD IN Meters, Y CORD IN Meters], {icon: ICON VAR NAME}).addTo(map);
+How to use Markers in Leaflet
+  L.marker([X CORD IN Meters, Y CORD IN Meters], {icon: ICON VAR NAME}).addTo(map);
+  Example L.marker([2200, 11840], {icon: BCDO}).addTo(map);
 
-Example L.marker([2200, 11840], {icon: BCDO}).addTo(map);
+Step 4. Adding more Unit types
+
+Start by declaring the variable with the refrence to their icon (https://spatialillusions.com/unitgenerator/).
+
+![image](https://user-images.githubusercontent.com/43555809/143471775-3f3ec98f-92b7-4631-bc6e-1501249a1448.png)
+
+Then using the markers above just refrence the var name.
