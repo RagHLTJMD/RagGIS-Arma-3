@@ -16,7 +16,7 @@ Step 1. Clone the repo and load it into your webserver root
 
   NGINX - /usr/share/nginx/http
   
-Step 2. select which map you want to load by changing lines 25 and 28
+Step 2. select which map you want to load by changing lines 25 and 28. Supported maps can be found here: https://github.com/jetelain/Arma3Map
   ![image](https://user-images.githubusercontent.com/43555809/143469080-75148368-4027-4a99-88d2-8d3c18a957b1.png)
 
 Step 3. Placing markers. 
