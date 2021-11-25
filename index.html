@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RagGIS - EXAMPLE</title>
+    <title>RagGIS - OPCOM</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -85,7 +85,7 @@
 			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	    });
 
-// BLUFOR SAS POS 
+// BLUFOR SAS  
     var BSAS = L.icon({
 			iconUrl: '../icons/BLUFOR/BSAS.png',
 			iconSize:     [60, 40], // size of the icon
@@ -95,7 +95,7 @@
 			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	    });   
 
-// BLUFOR Rifles POS 
+// BLUFOR Rifles  
     var BRif = L.icon({
 			iconUrl: '../icons/BLUFOR/BRif.png',
 			iconSize:     [60, 40], // size of the icon
@@ -105,10 +105,50 @@
 			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 	    });   
 
-// BLUFOR 30CDO POS 
+// BLUFOR 30CDO  
     var BCDO = L.icon({
 			iconUrl: '../icons/BLUFOR/BCDO.png',
 			iconSize:     [60, 40], // size of the icon
+			shadowSize:   [35, 30], // size of the shadow
+			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
+			shadowAnchor: [4, 62],  // the same for the shadow
+			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	    });   
+
+// BLUFOR Phantom  
+		var BFJPhan = L.icon({
+			iconUrl: '../icons/BLUFOR/BFJPhan.png',
+			iconSize:     [50, 25], // size of the icon
+			shadowSize:   [35, 30], // size of the shadow
+			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
+			shadowAnchor: [4, 62],  // the same for the shadow
+			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	    });  
+		
+// BLUFOR Gambit
+		var BUHGa = L.icon({
+			iconUrl: '../icons/BLUFOR/BUHGa.png',
+			iconSize:     [50, 25], // size of the icon
+			shadowSize:   [35, 30], // size of the shadow
+			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
+			shadowAnchor: [4, 62],  // the same for the shadow
+			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	    });   
+
+// BLUFOR Ugly
+		var BAHUg = L.icon({
+			iconUrl: '../icons/BLUFOR/BAHUg.png',
+			iconSize:     [50, 25], // size of the icon
+			shadowSize:   [35, 30], // size of the shadow
+			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
+			shadowAnchor: [4, 62],  // the same for the shadow
+			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+	    });
+		
+// BLUFOR Watcher
+		var BUAVWat = L.icon({
+			iconUrl: '../icons/BLUFOR/BUAVWat.png',
+			iconSize:     [50, 25], // size of the icon
 			shadowSize:   [35, 30], // size of the shadow
 			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
 			shadowAnchor: [4, 62],  // the same for the shadow
@@ -148,7 +188,7 @@
 // OPFOR FOBD
     var OFob = L.icon({
 			iconUrl: '../icons/OPFOR/OFOB.png',
-			iconSize:     [40, 40], // size of the icon
+			iconSize:     [30, 50], // size of the icon
 			shadowSize:   [35, 30], // size of the shadow
 			iconAnchor:   [10, 15], // point of the icon which will correspond to marker's location
 			shadowAnchor: [4, 62],  // the same for the shadow
@@ -197,33 +237,41 @@
 
 // BLUFOR MARKERS
 	L.marker([2336, 11840], {icon: FriendlyBase}).addTo(map);
-	L.marker([5580, 15850], {icon: FFabiano}).addTo(map).addTo(map).addTo(map).bindPopup("<b>FOB Fabiano</b><br />Established by 2 PARA, 2* HLS, Ammo, Fuel, Med Center").openPopup();
-	L.marker([7570, 10940], {icon: FGreenBase}).addTo(map).addTo(map).bindPopup("<b>FOB Green Base</b><br />Established by Rifles, AWAITING DETAILS").openPopup();
-	L.marker([2000, 11840], {icon: BSAS}).addTo(map);
-	L.marker([7570, 10940], {icon: BRif}).addTo(map);
-	L.marker([2200, 11840], {icon: BCDO}).addTo(map);
+	L.marker([5580, 15850], {icon: FFabiano}).addTo(map).bindPopup("<b>FOB Fabiano</b><br />Established by 2 PARA, 2* HLS, Ammo, Fuel, Med Center").openPopup();
+	L.marker([7570, 10940], {icon: FGreenBase}).addTo(map).bindPopup("<b>FOB Green Base</b><br />Established by Rifles, AWAITING DETAILS").openPopup();
+	L.marker([2000, 11840], {icon: BSAS}).addTo(map).bindPopup("<b>22SAS</b><br />IC: Capt. W. Scott").openPopup();
+	L.marker([7570, 10940], {icon: BRif}).addTo(map).bindPopup("<b>The Rifles</b><br />IC: Sjt. D. Wrench<br />2IC: CPL. J. Brick").openPopup();
+	L.marker([2200, 11840], {icon: BCDO}).addTo(map).bindPopup("<b>30 CDO</b><br />IC: Lt. M. Popa").openPopup();
+	L.marker([1890, 11910], {icon: BAHUg}).addTo(map);
+	L.marker([1810, 11970], {icon: BUHGa}).addTo(map);
+	L.marker([1650, 12100], {icon: BFJPhan}).addTo(map);
+	L.marker([1750, 12020], {icon: BUAVWat}).addTo(map);
 
 //OPFOR MARKERS
-	L.marker([6030, 17050], {icon: OIEDFac}).addTo(map).addTo(map).bindPopup("<b>Destroyed by 2PARA</b>").openPopup();
-	L.marker([8190, 10670], {icon: OIEDFac}).addTo(map).addTo(map).bindPopup("<b>Destroyed by 30CDO</b>").openPopup();
-	L.marker([5740, 18000], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
-	L.marker([5560, 16240], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();  
-	L.marker([5850, 15820], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
-	L.marker([6300, 15770], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
-	L.marker([5150, 15530], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
-	L.marker([5100, 16250], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
+	L.marker([6030, 17050], {icon: OIEDFac}).addTo(map).bindPopup("<b>Destroyed by 2PARA</b>").openPopup();
+	L.marker([8190, 10670], {icon: OIEDFac}).addTo(map).bindPopup("<b>Destroyed by 30CDO</b>").openPopup();
+    L.marker([5740, 18000], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
+    L.marker([5560, 16240], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();  
+    L.marker([5850, 15820], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
+    L.marker([6300, 15770], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
+    L.marker([5150, 15530], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
+    L.marker([5100, 16250], {icon: OSqadDes}).addTo(map).bindPopup("<b>TB INF Element Destroyed</b>").openPopup();
 	L.marker([5800, 17380], {icon: OFobDes}).addTo(map).bindPopup("<b>TB FOB Destroyed</b>").openPopup();
-	L.marker([9350, 13750], {icon: OFob}).addTo(map).bindPopup("<b>EXAMPLE OBJ: Capture Puestro Crow FOB</b><br />").openPopup();
-	L.marker([4580, 18220], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
-	L.marker([7720, 11650], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
-	L.marker([6900, 9770], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
-	L.marker([9400, 5800], {icon: OMPPos}).addTo(map).addTo(map).addTo(map).bindPopup("<b>EXAMPLE OBJ: Identify Source of Taliban Activity Near MANPAD Storage Site</b><br />").openPopup();
-	L.marker([11280, 8050], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
+    L.marker([9350, 13750], {icon: OFob}).addTo(map).bindPopup("<b>Rifles OBJ: Capture Puestro Crow FOB</b><br />30 CDO have identified heavy enemy presence and MANPAD activity at the Puestro Crow FOB. The MANPAD launchers at this site may be a danger to any friendly aircraft. Consequently an assault is recommended.").openPopup();
+    L.marker([4580, 18220], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
+    L.marker([7720, 11650], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
+    L.marker([6900, 9770], {icon: OMPDes}).addTo(map).bindPopup("<b>MANPAD Destroyed</b>").openPopup();
+    L.marker([9400, 5800], {icon: OMPPos}).addTo(map).bindPopup("<b>22SAS OBJ: Identify Source of Taliban Activity Near MANPAD Storage Site</b><br />A large number of Taliban forces engaged 22 SAS forces near the MANPAD Storage Site. They moved in as reinforcements when the first shots were fired. This increased presence may suggest a Taliban Stronghold in the area.").openPopup();
+    L.marker([11280, 8050], {icon: OMPDes}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
+    L.marker([9380, 9010], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
+	L.marker([7690, 12860], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
+	L.marker([12510, 10930], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
 	L.marker([9380, 9010], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
-	L.marker([11800, 9300], {icon: OBatE}).addTo(map).bindPopup("<b>OPFOR Company Strength Presence</b><br /><iframe src=[INSERT YOUTUBE VIDEO title=YouTube video player frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>").openPopup();
-	L.marker([12900, 8120], {icon: OObj}).addTo(map).addTo(map).bindPopup("<b>EXAMPLE OBJ: Investigate Kunara</b><br />").openPopup();
-	L.marker([12040, 9550], {icon: OObj}).addTo(map).addTo(map).bindPopup("<b>EXAMPLE OBJ: Potential Location of OPFOR</b><br />").openPopup();
-	L.marker([11340, 9720], {icon: OObj}).addTo(map).addTo(map).bindPopup("<b>EXAMPLE OBJ: Mikis FOB</b><br />").openPopup();
+	L.marker([10170, 11740], {icon: OMPPos}).addTo(map).bindPopup("<b>Possible MANPAD Location ID'd by INT</b>").openPopup();
+    L.marker([11800, 9300], {icon: OBatE}).addTo(map).bindPopup("<b>OPFOR Company Strength Presence</b><br /><iframe src=https://www.youtube.com/embed/wbjxTKRAHVQ title=YouTube video player frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>").openPopup();
+    L.marker([12900, 8120], {icon: OObj}).addTo(map).bindPopup("<b>Rifles OBJ: Investigate Kunara</b><br />Reconnaissance should be conducted on the town of Kunara to identify the source of the lights.This should be conducted at night if possible. Results of reconnaissance should determine if a raid is conducted on the town.").openPopup();
+    L.marker([12040, 9550], {icon: OObj}).addTo(map).bindPopup("<b>Potential Location of EF</b><br />It is suspected that the mosque they are talking about is located about 1.5km South East of the town of Kunara. If possible the mosque should be raided and confirmed if this is the mosque they were talking about.").openPopup();
+    L.marker([11340, 9720], {icon: OObj}).addTo(map).bindPopup("<b>Rifles OBJ: Mikis FOB</b><br /><img src=https://cdn.discordapp.com/attachments/890256461517709322/913500424735191070/image0.jpg height=150px width=250px>").openPopup();
 	
 // CIV MARKERS
 
